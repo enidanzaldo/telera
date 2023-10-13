@@ -21,6 +21,6 @@ use App\Http\Controllers\ControllerSystem;
 Route::name('indexGrupos')->get('/indexGrupos',[ControllerSystem::class,'indexGrupos']);
 Route::name('indexAlumnos')->get('/indexAlumnos',[ControllerSystem::class,'indexAlumnos']);
 Route::name('Crearalumno')->get('/Crearalumno',[ControllerSystem::class,'detallesAlumno']);
-Route::name('almacenarAlumno')->post('/almacenarAlumno',[ControllerSystem::class,'almacenarAlumno']);
+Route::post('/almacenarAlumno',[ControllerSystem::class,'almacenarAlumno'])->name('almacenarAlumno');
 Route::name('Creargrupo')->get('/Creargrupo',[ControllerSystem::class,'detallesGrupo']);
 Route::name('almacenarGrupo')->post('/Grupos',[ControllerSystem::class,'storegrupos']);

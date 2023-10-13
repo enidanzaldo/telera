@@ -40,7 +40,8 @@
 </head>
 <body>
     <h1>Crear alumno</h1>
-    <form action="/almacenarAlumno" method="post" enctype="multipart/form-data">
+    <form action="{{ route('almacenarAlumno') }}" method="post" enctype="multipart/form-data">
+        @csrf
         <table>
             <tbody>
                 <tr>
