@@ -3,52 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crear alumno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        td {
+            border: 1px solid #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Crear alumno</h1>
-    {!! Form::open(['url' => '/almacenarAlumno', 'method' => 'post']) !!}
-        @csrf
-        <table border="1">
+    <form action="/almacenarAlumno" method="post" enctype="multipart/form-data">
+        <table>
             <tbody>
                 <tr>
-                    <td>nombre del alumno</td>
+                    <td>Nombre del alumno</td>
                     <td><input type="text" name="nombreAlumno" id="nombreAlumno"></td>
                 </tr>
                 <tr>
-                    <td>fn del alumno</td>
+                    <td>Fecha de nacimiento del alumno</td>
                     <td><input type="text" name="fnAlumno" id="fnAlumno"></td>
                 </tr>
                 <tr>
-                    <td>genero del alumno</td>
+                    <td>Género del alumno</td>
                     <td><input type="text" name="generoAlumno" id="generoAlumno"></td>
                 </tr>
                 <tr>
-                    <td>matricula del alumno</td>
+                    <td>Matrícula del alumno</td>
                     <td><input type="text" name="matriculaAlumno" id="matriculaAlumno"></td>
                 </tr>
                 <tr>
-                    <td>direccion del alumno</td>
+                    <td>Dirección del alumno</td>
                     <td><input type="text" name="direccionAlumno" id="direccionAlumno"></td>
                 </tr>
                 <tr>
-                    <td>email del alumno</td>
-                    <td><input type="text" name="emailAlumno" id="emialAlumno"></td>
+                    <td>Email del alumno</td>
+                    <td><input type="text" name="emailAlumno" id="emailAlumno"></td>
                 </tr>
                 <tr>
-                    <td>password del alumno</td>
-                    <td><input type="text" name="passwordAlumno" id="passwordAlumno"></td>
+                    <td>Password del alumno</td>
+                    <td><input type="password" name="passwordAlumno" id="passwordAlumno"></td>
                 </tr>
-                
                 <tr>
-                    <td>foto del alumno</td>
+                    <td>Foto del alumno</td>
                     <td><input class="form-control" type="file" name="foto"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button type="submit">guardar</button></td>
+                    <td colspan="2"><button type="submit">Guardar</button></td>
                 </tr>
             </tbody>
         </table>
-    {!! Form::close() !!}
+    </form>
 </body>
 </html>
